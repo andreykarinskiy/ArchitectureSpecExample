@@ -20,7 +20,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      # Give the default GITHUB_TOKEN write permission to commit and push the changed files back to the repository.
+      # Выдать разрешение на запись учетке GITHUB_TOKEN.
       contents: write
 
     steps:
@@ -29,8 +29,7 @@ jobs:
       
       - name: Скопировать файл arc-template.md с новым именем PROJECT-ARC.md, где PROJECT - реальное имя проекта.
         run: |
-          cp arc-template.md {{$PROJECT}}-arc.md
-          ls 
+          cp arc-template.md ${{PROJECT}}-arc.md
       
       # - name: Заменить плейсхолдеры в PROJECT-ARC.md на содержимое разделов из папки doc.
 
