@@ -24,10 +24,8 @@ jobs:
         uses: actions/checkout@v3
       
       - name: Скопировать файл arc-template.md с новым именем PROJECT-ARC.md, где PROJECT - реальное имя проекта.
-        uses: canastro/copy-file-action@master
-        with:
-          source: "arc-template.md"
-          target: "{$PROJECT}-arc.md"
+        run: |
+          cp arc-template.md {{$PROJECT}}-arc.md
       
       # - name: Заменить плейсхолдеры в PROJECT-ARC.md на содержимое разделов из папки doc.
 
@@ -35,6 +33,6 @@ jobs:
       
       - name: Коммит созданных файлов.
         run: |
-          git add {$PROJECT}-arc.md
+          git add {{$PROJECT}}-arc.md
           git commit -m "Architecture Specification created."
           git push origin master
