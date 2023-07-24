@@ -25,9 +25,9 @@ jobs:
           source: "arc-template.md"
           target: "{$PROJECT}-arc.md"
       
-      - name: Заменить плейсхолдеры в PROJECT-ARC.md на содержимое разделов из папки doc.
+      # - name: Заменить плейсхолдеры в PROJECT-ARC.md на содержимое разделов из папки doc.
 
-      - name: Создать PROJ-ARC.pdf на основе .md
+      # - name: Создать PROJ-ARC.pdf на основе .md
       
       - name: Коммит созданных файлов.
         run: |
