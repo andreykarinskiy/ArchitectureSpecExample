@@ -38,3 +38,5 @@ jobs:
       
       - name: Коммит созданных файлов.
         uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          output_file_paths: '[$PROJECT-arc.md]'
