@@ -32,11 +32,9 @@ jobs:
           cp arc-template.md $PROJECT-arc.md
       
       - name: Заменить плейсхолдеры в PROJECT-ARC.md на содержимое разделов из папки doc.
-        uses: dineshsonachalam/markdown-autodocs@v1.0.7
+        run: echo "Replace"
         
       # - name: Создать PROJ-ARC.pdf на основе .md
       
       - name: Коммит созданных файлов.
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          output_file_paths: '[$PROJECT-arc.md]'
+        uses: stefanzweifel/git-auto-commit-action@v4        
