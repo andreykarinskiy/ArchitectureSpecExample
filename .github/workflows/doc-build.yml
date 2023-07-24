@@ -31,8 +31,9 @@ jobs:
         run: |
           cp arc-template.md $PROJECT-arc.md
       
-      # - name: Заменить плейсхолдеры в PROJECT-ARC.md на содержимое разделов из папки doc.
-
+      - name: Заменить плейсхолдеры в PROJECT-ARC.md на содержимое разделов из папки doc.
+        uses: dineshsonachalam/markdown-autodocs@v1.0.7
+        
       # - name: Создать PROJ-ARC.pdf на основе .md
       
       - name: Коммит созданных файлов.
