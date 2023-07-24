@@ -32,7 +32,4 @@ jobs:
       # - name: Создать PROJ-ARC.pdf на основе .md
       
       - name: Коммит созданных файлов.
-        run: |
-          git add {{$PROJECT}}-arc.md
-          git commit -m "Architecture Specification created."
-          git push origin master
+        uses: stefanzweifel/git-auto-commit-action@v4
