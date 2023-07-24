@@ -11,6 +11,10 @@ on:
 env:
   PROJECT: DocFlow 
 
+defaults:
+    run:
+      working-directory: ./doc
+
 jobs:
   build:
     runs-on: ubuntu-latest
